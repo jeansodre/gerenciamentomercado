@@ -1,0 +1,33 @@
+@import '~bootstrap/dist/css/bootstrap.min.css';
+
+
+body{
+  background-color: #fcfcfc
+}
+
+.title-page {
+  padding: 1%;
+  margin-left: 5%;
+  margin-bottom: 3%;
+}
+
+nav form {
+  height: 100%;
+  width: 60%;
+  margin-left: 20%;
+  background-color: #f2f2f2;
+  padding: 4%;
+  border-radius: 0.6rem;
+  box-shadow: 1px 1px 8px #fbfbfb;
+}
+
+.form-control {
+  background-color: #f2f2f2;
+}
+
+
+label {
+  font-size: 0.9rem;
+  font-weight: bold;
+  color: #121214;
+}

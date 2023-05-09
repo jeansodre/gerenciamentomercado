@@ -1,0 +1,31 @@
+<div class="container">
+  <div class="title-page">
+    <h3>Lista de Vendas</h3>
+  </div>
+  <div class="summary">
+    <div class="container-resumo">
+      <h4> Resumo do Período: </h4>
+      <div>Total de Vendas: {{ getTotalSalesCount() }}</div>
+      <div>Valor das Vendas: {{ getTotalSaleValue() | currency:'BRL' }}</div>
+      <div>Valor de Impostos: {{ getTotalTaxValue() | currency:'BRL' }}</div>
+  </div>
+  </div>
+  <table class="table">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Data</th>
+        <th>Total</th>
+        <th>Impostos Totais</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let sale of sales">
+        <td>{{ sale.id }}</td>
+        <td>{{ sale.data | date:'dd/MM/yyyy' }}</td>
+        <td>{{ sale.total | currency:'BRL' }}</td>
+        <td>{{ sale.total_impostos | currency:'BRL' }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

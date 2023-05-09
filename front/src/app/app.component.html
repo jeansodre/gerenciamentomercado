@@ -1,0 +1,17 @@
+<nav>
+  <div class="nav-wrapper">
+    <a href="#!" class="brand-logo"><img class="logo" src="../assets/images/logomarca.png" alt="logo mercado são josé"></a>
+    <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+    <ul class="right hide-on-med-and-down">
+      <li><a routerLink="/products/create">Cadastrar Produto</a></li>
+      <li><a routerLink="/product-types/create">Cadastrar Tipo de Produto</a></li>
+      <li><a routerLink="/taxes/create">Cadastrar Imposto</a></li>
+      <li><a routerLink="/sales/create">Realizar Venda</a></li>
+      <li><a routerLink="/sales">Vendas realizadas</a></li>
+      <li><a routerLink="/sugestoes">Sugestões</a></li>
+    </ul>
+    <div class="col s9">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+</nav>

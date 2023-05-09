@@ -1,0 +1,10 @@
+
+.container-resumo {
+  color: #121214;
+  color: #121214;
+    display: flex;
+    gap: 8%;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}

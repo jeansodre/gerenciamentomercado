@@ -1,0 +1,18 @@
+.form-sale {
+  display: flex;
+  width: 90%;
+  margin-left: 5%;
+}
+
+.container-left{
+  width: 30%;
+  margin-right: 2%
+}
+
+.container-right {
+  width: 58%;
+  justify-content: center;
+  align-items: center;
+  display: grid;
+  color: #656565;
+}

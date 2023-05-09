@@ -1,0 +1,18 @@
+<div class="container">
+  <div class="title-page">
+    <h3>Cadastrar Tipo de Produto</h3>
+  </div>
+  <form [formGroup]="productTypeForm" (submit)="onSubmit()">
+    <div class="form-group">
+      <label for="nome">Nome</label>
+      <input
+        type="text"
+        class="form-control"
+        id="nome"
+        formControlName="nome"
+        required
+      />
+    </div>
+    <button type="submit" class="btn btn-primary" [disabled]="productTypeForm.invalid">Cadastrar</button>
+  </form>
+</div>

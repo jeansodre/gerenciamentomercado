@@ -1,0 +1,71 @@
+<div class="container">
+  <div class="title-page">
+    <h3>Nova Venda</h3>
+  </div>
+  <form class="form-sale" (submit)="onSubmit()">
+    <div class="container-left">
+        <div class="form-group">
+          <label for="product">Produto</label>
+          <select
+            class="form-control"
+            id="product"
+            [(ngModel)]="selectedProduct"
+            name="product"
+            (change)="onProductChange()"
+          >
+            <option *ngFor="let product of products" [ngValue]="product">
+              {{ product.nome }}
+            </option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="quantity">Quantidade</label>
+          <input
+            type="number"
+            class="form-control"
+            id="quantity"
+            [(ngModel)]="quantity"
+            name="quantity"
+            required
+          />
+        </div>
+        <button type="button" class="btn btn-primary" (click)="addItem()">
+          Adicionar Item
+        </button>
+  </div>
+    <div class="container-right">
+
+      <h2>Itens da Venda</h2>
+      <table class="table">
+        <thead>
+          <tr>
+            <th>Produto</th>
+            <th>Qtd</th>
+            <th>Preço/Un</th>
+            <th>Imposto</th>
+            <th>Total</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let item of saleItems; let i = index">
+            <td>{{ item.product.nome }}</td>
+            <td>{{ item.quantity }}</td>
+            <td>{{ item.product.preco | currency:'BRL' }}</td>
+            <td>{{ item.taxAmount | currency:'BRL'}}</td>
+            <td>{{ item.total + item.taxAmount | currency:'BRL' }}</td>
+            <td>
+              <button type="button" class="btn btn-danger btn-sm" (click)="removeItem(i)">
+                Excluir
+              </button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <div>Total da Venda: {{ saleTotal | currency:'BRL' }}</div>
+      <div>Total de Impostos: {{ taxTotal | currency:'BRL' }}</div>
+      <button type="submit" class="btn btn-success">Finalizar Venda</button>
+  </div>
+  </form>
+
+</div>
