@@ -18,9 +18,9 @@ https://www.jeansodre.com/projeto/
 
 ## Instalação
 
-1. Clone este repositório para a sua máquina local:
--Utilize o comando:
-git clone https://github.com/SEU_USUARIO/sistema-mercado.git
+1. Clone este repositório para a sua máquina local com:
+
+git clone 
 
 
 2. Navegue até a pasta do projeto front e instale as dependências, rode o comando:
